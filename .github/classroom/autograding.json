@@ -1,0 +1,44 @@
+{
+  "tests": [
+    {
+      "name": "Exercise 1",
+      "setup": "",
+      "run": "cd e01 && gradle test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 3,
+      "points": 2
+    },
+    {
+      "name": "Exercise 2",
+      "setup": "",
+      "run": "cd e02 && gradle test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 3,
+      "points": 2
+    },
+    {
+      "name": "Exercise 3",
+      "setup": "",
+      "run": "cd e03 && gradle test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 3,
+      "points": 2
+    },
+    {
+      "name": "Exercise 4",
+      "setup": "",
+      "run": "cd e03 && gradle test",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 3,
+      "points": 2
+    }
+  ]
+}
