@@ -11,3 +11,117 @@ public class App {
 
     }
 }
+
+class Hardware {
+    String manufacterer;
+    String model;
+
+    Hardware () {
+
+    }
+    Hardware(final String brand, String mod){
+        this.manufacterer = brand;
+        this.model = mod;
+    }
+}
+
+class CPU extends Hardware {
+    double speed;
+
+    CPU(final String brand, String mod, double fast) {
+        this.speed = fast;
+        super.manufacterer = brand;
+        super.model = mod;
+    }
+    CPU(double fast) {
+        this.speed = fast;
+    }
+    public double getSpeed() {
+        return this.speed;
+    }
+
+}
+
+class GPU extends Hardware {
+    double memory;
+
+    GPU(final String brand, String mod, double memo) {
+        this.memory = memo;
+        super.manufacterer = brand;
+        super.model = mod;
+    }
+    GPU(double memo) {
+        this.memory = memo;
+    }
+
+    public double getMemory() {
+        return this.memory;
+    }
+}
+
+class RAM extends Hardware {
+    double capacity;
+
+    RAM(final String brand, String mod, double capac) {
+        this.capacity = capac;
+        super.manufacterer = brand;
+        super.model = mod;
+    }
+    RAM(double capac) {
+        this.capacity = capac;
+    }
+
+    public double getCapacity() {
+        return this.capacity;
+    }
+}
+
+class Storage extends Hardware {
+    double capacity;
+
+    Storage(final String brand, String mod, double capac) {
+        this.capacity = capac;
+        super.manufacterer = brand;
+        super.model = mod;
+    }
+    Storage(double capac){
+        this.capacity = capac;
+    }
+
+
+    public double getCapacity() {
+        return this.capacity;
+    }
+}
+
+class Computer {
+    CPU cpu = new CPU("Intel", "XP", 4);
+    GPU gpu = new GPU("Nivida", "8IP", 8);
+    RAM ram = new RAM("Cort", "1999", 10);
+    Storage storage = new Storage("Delia", "KK", 256);
+
+    Computer(CPU c, GPU g, RAM r, Storage s) {
+        this.cpu = c;
+        this.gpu = g;
+        this.ram = r;
+        this.storage = s;
+    }
+    Computer(){
+        
+    }
+
+    double getTotalMemory() {
+        return gpu.getMemory()+ram.getCapacity();
+    }
+    double getTotalCapacity() {
+        return storage.getCapacity()+ram.getCapacity();
+    }
+}
+
+class ComputerDriver {
+    public static void main(String[] args) {
+        Computer computer = new Computer();
+        computer.getTotalCapacity();
+        computer.getTotalMemory();
+    }
+}
